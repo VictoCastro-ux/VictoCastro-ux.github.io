@@ -1,93 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Animal Generator - Pokémon Edition</title>
-    <style>
-        /* Estilização baseada na imagem enviada */
-        body {
-            background-color: #f0e1f4; /* Roxo pastel do fundo */
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Curlz MT', cursive;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Pokémon Random Generator</title>
 
-        h1 {
-            color: #4a332d;
-            font-size: 2.2em;
-            margin-bottom: 5px;
-            font-style: italic;
-        }
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 
-        .author {
-            font-size: 1.1em;
-            color: #7a665e;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
+  <style>
+    /* 2. Configurações de Fundo e Fonte Principal */
+    body {
+        background-color: #3b4cca; /* Azul clássico */
+        /* Alterado para Lucida Console */
+        font-family: 'Lucida Console', Monaco, monospace; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        margin: 0;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 450px;
-        }
+    /* 3. Título com a fonte do seu link e estilo Pokémon */
+    h1 {
+        font-family: 'Pokemon Solid', sans-serif; /* Nome exato da fonte do link */
+        color: #ffcb05; /* Amarelo */
+        font-size: 4em;
+        margin-bottom: 0px;
+        letter-spacing: 4px;
+        /* Borda Azul Escura */
+        text-shadow: 
+            -4px -4px 0 #2a75bb,  
+             4px -4px 0 #2a75bb,
+            -4px  4px 0 #2a75bb,
+             4px  4px 0 #2a75bb,
+             6px  6px 0 #1d4486;
+    }
 
-        /* Estilo das linhas clicáveis */
-        .row {
-            display: flex;
-            margin-bottom: 12px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            height: 45px;
-        }
+    .author {
+        font-family: 'Pokemon Solid', sans-serif;
+        font-size: 1.2em;
+        color: #ffcb05;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 0 #2a75bb;
+    }
 
-        .row:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            filter: brightness(0.98);
-        }
+    .container {
+        width: 100%;
+        max-width: 450px;
+    }
 
-        .row:active {
-            transform: translateY(0);
-        }
+    /* 4. Estilo das Linhas do Gerador */
+    .row {
+        display: flex;
+        margin-bottom: 12px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        height: 50px;
+        overflow: hidden;
+    }
 
-        /* Etiqueta Amarela (Label) */
-        .label {
-            background-color: #fff9c4; /* Amarelo claro da imagem */
-            width: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-style: italic;
-            border-right: 1px solid #f0e1f4;
-            color: #444;
-        }
+    .row:hover {
+        transform: scale(1.03);
+    }
 
-        /* Espaço do Resultado (Value) */
-        .value {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1em;
-            color: #333;
-            background: white;
-        }
+    .label {
+        background-color: #fff9c4; /* Amarelo etiqueta */
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-right: 2px solid #3b4cca;
+        color: #444;
+        font-size: 0.9em;
+    }
 
-        .instruction {
-            margin-top: 20px;
-            color: #8b7a91;
-            font-size: 0.9em;
-        }
-    </style>
+    .value {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #1d4486;
+    }
+
+    .instruction {
+        margin-top: 25px;
+        color: white;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.8em;
+    }
+  </style>
 </head>
 <body>
 
